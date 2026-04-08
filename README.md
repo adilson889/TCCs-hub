@@ -1,52 +1,92 @@
-# TCCs-hub
-Repositório aberto de compartilhamento de trabalho de conclusão de curso  e artigos científicos
-Perfeito! Aqui está o **README.md** para o seu repositório público, fingindo que é o único e principal:
+Perfeito. Sem enfeites. Direto ao ponto. Aqui está o README profissional, sem emojis e sem invenção:
+
+---
 
 ```markdown
 # TCC Hub
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-3.0-brightgreen.svg)]()
+[![Platform](https://img.shields.io/badge/platform-Android-blue)]()
+[![APKPure](https://img.shields.io/badge/APKPure-Download-orange)](https://apkpure.net/tcc-hub/com.tcchub)
 
-Repositório acadêmico colaborativo para compartilhamento e descoberta de Trabalhos de Conclusão de Curso (TCCs) e Artigos Científicos.
-
-## Sobre
-
-O TCC Hub é um aplicação web que permite a estudantes e pesquisadores acessar, avaliar e compartilhar produção acadêmica de forma colaborativa.
-
-### Funcionalidades
-
-- Repositório completo de TCCs e artigos
-- Sistema de avaliação por estrelas (1 a 5)
-- Busca avançada por título, autor e curso
-- Modo claro
-- Favoritos para leitura offline
-- Publicação colaborativa
-
-## Como usar
-
-1. Acesse o aplicativo online: [tcchub.app](https://repositórioaberto.vercel.app)
-2. Navegue pelos TCCs disponíveis
-3. Avalie os trabalhos que você consultar
-4. Publique seu próprio TCC
-
-## Instalação local
-
-```bash
-git clone https://github.com/adilson889tccs-hub.git
-cd tccs-hub
-python -m http.server 8000
-``
-## Licença
-
-Este projeto está licenciado sob a Apache License 2.0 - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## Contato
-
-- Abrir uma issue no GitHub
-- Email: contato@tcchub.app
+Repositorio academico colaborativo para compartilhamento e descoberta de Trabalhos de Conclusao de Curso (TCCs) e Artigos Cientificos.
 
 ---
 
-Desenvolvido com JavaScript puro
+## Sobre
 
+O TCC Hub e uma plataforma que permite a estudantes, pesquisadores e professores acessar, avaliar e publicar producoes academicas de forma organizada.
+
+---
+
+## Funcionalidades
+
+- Repositorio completo de TCCs e artigos
+- Sistema de avaliacao por estrelas (1 a 5)
+- Busca avancada por titulo, autor e curso
+- Modo claro / escuro
+- Favoritos para leitura offline
+- Publicacao colaborativa
+
+---
+
+## Download
+
+O aplicativo esta disponivel no APKPure:
+
+Link: https://apkpure.net/tcc-hub/com.tcchub
+
+Requisitos:
+- Android 6.0 ou superior
+- 7.2 MB de espaco livre
+
+---
+
+## Capturas de Tela
+
+| Tela | Imagem |
+|------|--------|
+| Inicio | screenshots/inicio.jpg |
+| Ver TCC | screenshots/vertcc.jpg |
+| Avaliar | screenshots/avaliar.jpg |
+| Perfil | screenshots/perfil.jpg |
+| Cadastro | screenshots/cadastro.jpg |
+| Login | screenshots/login.jpg |
+
+---
+
+## Tecnologias
+
+- HTML5 / CSS3
+- JavaScript (puro)
+- LocalStorage
+- Vercel (landing page)
+- APKPure (distribuicao)
+
+---
+
+## Instalacao Local
+
+```bash
+git clone https://github.com/adilson889/TCC-Hub.git
+cd TCC-Hub
+```
+
+Abra o arquivo index.html no navegador.
+
+---
+
+## Licenca
+
+Apache License 2.0 - veja o arquivo LICENSE para detalhes.
+
+---
+
+## Autor
+
+Adilson C. Rafael
+Namibe, Angola
+
+GitHub: https://github.com/adilson889
+```
