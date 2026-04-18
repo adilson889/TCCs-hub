@@ -1,0 +1,11 @@
+{
+  "services": {
+    "facebook": {},
+    "socialLogin": {},
+    "oneSignal": {},
+    "admob": {},
+    "auth0": {},
+    "socialShare": {},
+    "branch": {}
+  }
+}

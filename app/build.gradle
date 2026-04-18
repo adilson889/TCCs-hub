@@ -169,18 +169,32 @@ android {
         jvmToolchain(21)
     }
 
+    def releaseStoreFile = project.findProperty("RELEASE_STORE_FILE") ?: System.getenv("RELEASE_STORE_FILE")
+    def releaseStorePassword = project.findProperty("RELEASE_STORE_PASSWORD") ?: System.getenv("RELEASE_STORE_PASSWORD")
+    def releaseKeyAlias = project.findProperty("RELEASE_KEY_ALIAS") ?: System.getenv("RELEASE_KEY_ALIAS")
+    def releaseKeyPassword = project.findProperty("RELEASE_KEY_PASSWORD") ?: System.getenv("RELEASE_KEY_PASSWORD")
+
+    def uploadStoreFile = project.findProperty("UPLOAD_STORE_FILE") ?: System.getenv("UPLOAD_STORE_FILE")
+    def uploadStorePassword = project.findProperty("UPLOAD_STORE_PASSWORD") ?: System.getenv("UPLOAD_STORE_PASSWORD")
+    def uploadKeyAlias = project.findProperty("UPLOAD_KEY_ALIAS") ?: System.getenv("UPLOAD_KEY_ALIAS")
+    def uploadKeyPassword = project.findProperty("UPLOAD_KEY_PASSWORD") ?: System.getenv("UPLOAD_KEY_PASSWORD")
+
     signingConfigs {
         release {
-            storeFile file("../../release.keystore")
-            storePassword "password"
-            keyAlias "release"
-            keyPassword "password"
+            if (releaseStoreFile) {
+                storeFile file(releaseStoreFile)
+                storePassword releaseStorePassword
+                keyAlias releaseKeyAlias
+                keyPassword releaseKeyPassword
+            }
         }
         upload {
-            storeFile file("../../upload.keystore")
-            storePassword "password"
-            keyAlias "upload"
-            keyPassword "password"
+            if (uploadStoreFile) {
+                storeFile file(uploadStoreFile)
+                storePassword uploadStorePassword
+                keyAlias uploadKeyAlias
+                keyPassword uploadKeyPassword
+            }
         }
     }
 
@@ -192,14 +206,18 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             debuggable project.getProperties().get("enableLogsInRelease").toBoolean()
-            signingConfig signingConfigs.release
+            if (releaseStoreFile) {
+                signingConfig signingConfigs.release
+            }
         }
         upload {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             matchingFallbacks = ['release']
             debuggable project.getProperties().get("enableLogsInRelease").toBoolean()
-            signingConfig signingConfigs.upload
+            if (uploadStoreFile) {
+                signingConfig signingConfigs.upload
+            }
         }
         buildTypes.each {
             it.buildConfigField 'boolean', 'GOOGLE_SERVICE_INVALID', googleServiceInvalid

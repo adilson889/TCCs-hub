@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-04-18
+
+- Corrigido o caminho do workflow de CI para `.github/workflows`.
+- Adicionada documentação técnica de setup/build no README.
+- Removidas credenciais fixas de assinatura no `app/build.gradle` e adotadas variáveis/propriedades seguras.
+- Restaurados arquivos mínimos de estrutura Android (`AndroidManifest.xml` e `appConfig.json`) para configuração inicial.
+
 ## 2014-01-04
 
 - Fix a crash on reload with no page loaded.
